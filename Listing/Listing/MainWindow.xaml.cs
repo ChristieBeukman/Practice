@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Listing.Model;
 
 namespace Listing
 {
@@ -23,6 +24,18 @@ namespace Listing
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            using (var ctx = new ListModelContext())
+            {
+                CategoryItem cat = new CategoryItem() { CategoryName = "Test", CategoryDescription = "desc" };
+
+                ctx.CategoryItems.Add(cat);
+                ctx.SaveChanges();
+                MessageBox.Show(cat.CategoryName + "has been added");
+            }
         }
     }
 }
