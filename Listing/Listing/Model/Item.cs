@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Listing.Model
 {
-    public class CategoryItem
+    public class Item
     {
-        public CategoryItem()
+        public Item()
         {
 
         }

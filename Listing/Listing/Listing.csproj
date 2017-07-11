@@ -78,6 +78,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\CategoryItem.cs" />
+    <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\ItemList.cs" />
+    <Compile Include="Model\ListModelContext.cs" />
+    <Compile Include="Model\Supplier.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">

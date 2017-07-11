@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Listing.Model
 {
-    public class CategoryItem
+    public class ItemList
     {
-        public CategoryItem()
+        public ItemList()
         {
-
+          
         }
     }
 }

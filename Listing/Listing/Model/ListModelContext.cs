@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Listing.Model
 {
-    public class CategoryItem
+    public class ListModelContext : DbContext
     {
-        public CategoryItem()
+        public ListModelContext() : base("TestListDb")
         {
 
         }
