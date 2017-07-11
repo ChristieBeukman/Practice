@@ -12,5 +12,12 @@ namespace Listing.Model
         {
 
         }
+
+        public int CategoryItemId { get; set; }
+        public string CategoryName { get; set; }
+        public string CategoryDescription { get; set; }
+
+        public IList<Item> Items { get; set; }
+
     }
 }

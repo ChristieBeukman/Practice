@@ -12,5 +12,13 @@ namespace Listing.Model
         {
 
         }
+
+        public int SupplierId { get; set; }
+        public string SupplierName { get; set; }
+        public string SupplierLocation { get; set; }
+        public string SupplierDescription { get; set; }
+
+        public IList<ItemList> ItemLists { get; set; }
+
     }
 }

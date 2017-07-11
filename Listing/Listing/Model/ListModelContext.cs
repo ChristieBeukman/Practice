@@ -11,7 +11,12 @@ namespace Listing.Model
     {
         public ListModelContext() : base("TestListDb")
         {
-
+           
         }
+
+        public DbSet<Item> Items{ get; set; }
+        public DbSet<CategoryItem> CategoryItems { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<ItemList> ItemLists { get; set; }
     }
 }

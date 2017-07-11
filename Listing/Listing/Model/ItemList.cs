@@ -12,5 +12,13 @@ namespace Listing.Model
         {
           
         }
+
+        public int ItemListId { get; set; }
+        public string ItemName { get; set; }
+        public string ItemDescription { get; set; }
+        public DateTime DateAdded { get; set; }
+        public DateTime DateDue { get; set; }
+        public int AmountItems { get; set; }
+        public decimal? PricePerItek { get; set; }
     }
 }
