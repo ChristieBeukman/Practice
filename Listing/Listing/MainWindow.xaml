@@ -4,9 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Listing"
+        xmlns:vm="clr-namespace:Listing.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <vm:MainViewModel x:Key="MainViewModel"/>
+    </Window.Resources>
+    <Window.DataContext>
+        <Binding Mode="OneWay" Source="{StaticResource MainViewModel}"/>
+    </Window.DataContext>
     <Grid>
-        <Button Content="add" Click="Button_Click"/>
+        <StackPanel>
+            <ComboBox ItemsSource="{Binding Main.CategoryItems, Source={StaticResource Locator}}" SelectedItem="{Binding SelectedCategoryItem, Source={StaticResource MainViewModel}}"
+                      DisplayMemberPath="CategoryName"
+                      SelectedIndex="0" IsSynchronizedWithCurrentItem="False"/>
+            <Button Content="Add" Command="{Binding AddCategoryCommand, Source={StaticResource MainViewModel}}"
+                    />
+        </StackPanel>
     </Grid>
 </Window>

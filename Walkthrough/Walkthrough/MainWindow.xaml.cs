@@ -12,10 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Listing.Model;
-using Listing.ViewModel;
 
-namespace Listing
+namespace Walkthrough
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,9 +23,6 @@ namespace Listing
         public MainWindow()
         {
             InitializeComponent();
-          
-
         }
-
     }
 }
